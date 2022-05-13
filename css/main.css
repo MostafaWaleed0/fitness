@@ -36,20 +36,6 @@
     --fs-900: 3rem;
   }
 }
-@media only screen and (min-width: 48em) {
-  :root {
-    --fs-700: 1.875rem;
-    --fs-800: 2rem;
-    --fs-900: 3rem;
-  }
-}
-@media only screen and (min-width: 48em) {
-  :root {
-    --fs-700: 1.875rem;
-    --fs-800: 2rem;
-    --fs-900: 3rem;
-  }
-}
 @media only screen and (min-width: 61.9375em) {
   :root {
     --fs-200: 0.75rem;
