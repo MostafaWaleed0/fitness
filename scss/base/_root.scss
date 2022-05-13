@@ -1,0 +1,67 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/type' as *;
+@use '../abstracts/breakpoints' as *;
+
+//colors
+:root {
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $screen-size, $property in $type-scale { 
+    @if $screen-size == small {
+      @each $prop, $value in $property {
+        --fs-#{$prop}: #{$value};
+      }
+    }   
+    @else if $screen-size == medium {
+      @each $prop, $value in $property {
+        @include breakpoint(medium) {
+          @each $prop, $value in $property {
+            --fs-#{$prop}: #{$value};
+          }
+        }
+      }
+    } @else if $screen-size == big {
+       @include breakpoint(large) {
+         @each $prop, $value in $property {
+           --fs-#{$prop}: #{$value};
+         }
+       }
+    }
+  }
+
+
+  //Shadows
+  --shadow-1: 10px 10px 15px var(--clr-dark-900);
+  --shadow-2: 3px 3px 5px var(--clr-dark-900);
+  --shadow-3: 2px 2px 5px var(--clr-dark-900);
+  --shadow-4: -8px 8px 5px var(--clr-dark-900);
+
+  // ==== BorderRadius ====
+  --border-radius-1: 0.3125em; // 5px
+  --border-radius-2: 0.625em; // 10px
+  --border-radius-3: 1.25em; // 20px
+  --border-radius-circle: 50%;
+
+  --letter-spacing-1: 0.215em;
+
+  //Filter
+  --filter-1: drop-shadow(4px 4px 5px var(--clr-dark-900));
+}
+
+
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}

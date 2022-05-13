@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+.headline {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem(52);
+  @include breakpoint-down(small) {
+    justify-content: center;
+  }
+
+  h2 {
+    @include pseudo($top: unset, $bottom: rem(-10)) {
+      width: rem(73);
+      height: rem(5);
+      background: var(--clr-pink-600);
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    @include breakpoint-down(small) {
+      display: none;
+    }
+  }
+}

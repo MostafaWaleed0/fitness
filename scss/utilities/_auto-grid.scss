@@ -1,0 +1,16 @@
+@supports (display: grid) {
+  .auto-grid {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--auto-grid-min-size, 16rem), 1fr)
+    );
+    gap: var(--auto-grid-row-gap) var(--auto-grid-column-gap);
+    justify-items: center;
+  }
+
+  .auto-grid > * {
+    max-width: unset;
+    margin: unset;
+  }
+}

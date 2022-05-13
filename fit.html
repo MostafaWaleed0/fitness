@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Home - Workout</title>
+  <meta content="" name="description">
+  <link href="./img/Logo.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet"><!-- Bootstrap Icons -->
+  <link href="https://unpkg.com/modern-css-reset/dist/reset.min.css" rel="stylesheet"><!-- Reset CSS File -->
+  <link href="./css/main.css" rel="stylesheet"><!-- Main Template CSS File -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"><!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="home container">
+  <!--========== HEADER ==========-->
+  <header class="primary-header  flex-row" role="banner">
+    <a class="logo" href="#"><img alt="" src="./img/Logo.png"></a>
+    <div class="primary-header__middle">
+      <div class="primary-header__navigation flex-row" data-visible="false" id="js-nav-menu">
+        <nav class="flex-row" tabindex="-1">
+          <ul aria-label="primary" class="flex-row" role="list">
+            <li>
+              <a href="#">exercises</a>
+            </li>
+            <li>
+              <a href="#">community</a>
+            </li>
+            <li>
+              <a href="#">pricing</a>
+            </li>
+            <li>
+              <a href="#">about us</a>
+            </li>
+          </ul>
+          <div aria-controls="js-nav-menu" aria-expanded="true" class="primary-header__close" id="js-nav-close" role="button">
+            <span aria-hidden="true" class="bi bi-x-lg"></span>
+          </div>
+        </nav>
+        <ul class="primary-header__cta flex-row" role="list">
+          <li>
+            <a class="primary-header__cta--login" href="#">Login</a>
+          </li>
+          <li>
+            <a class="primary-header__cta--signIn" href="#">sign in</a>
+          </li>
+        </ul>
+      </div>
+      <div aria-controls="js-nav-menu" aria-expanded="false" class="primary-header__toggle" id="js-nav-toggle" role="button">
+        <span aria-hidden="true" class="bi bi-justify"></span>
+      </div>
+    </div>
+  </header><!--========== MAIN ==========-->
+  <main tabindex="-1">
+    <!--=============== HOME ===============-->
+    <section class="hero flex-row">
+      <div class="hero__text">
+        <h1>4 week</h1>
+        <h2>Workout Plan</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, lacus eget consequat tincidunt, lectus ex bibendum libero, eget iaculis quam arcu quis mauris. Donec ex neque, egestas in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas</p><a class="btn btn-md-pi" href="">try for free</a>
+      </div>
+      <div class="hero__features">
+        <div class="row flex-row">
+          <div class="hero__img"></div>
+          <div class="cards flex-row">
+            <article class="card">
+              <h3>get inspired</h3>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringil. lacus eget consequat tincidunt, lectus ex.</p>
+              <div>
+                <a class="flex-row" href=""><span aria-hidden="true" class="grid bi bi-arrow-right"></span> Explore More</a>
+              </div>
+            </article>
+            <article class="card">
+              <h3>get inspired</h3>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringil. lacus eget consequat tincidunt, lectus ex.</p>
+              <div>
+                <a class="flex-row" href=""><span aria-hidden="true" class="grid bi bi-arrow-right"></span> Explore More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section><!--=============== ACTIVITIES ===============-->
+    <article class="activity" aria-labelledby="training-title">
+      <header class="headline flex-row">
+        <h2 id="training-title">latest training</h2><a href="#">see more here</a>
+      </header>
+      <ul class="cards auto-grid" role="list">
+        <li class="card">
+          <figure>
+            <img alt="" src="./img/RUNNING.png">
+            <figcaption>
+              <h3>running</h3>
+            </figcaption>
+          </figure>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, lacus eget consequat</p><a class="btn btn-small" href="">see more</a>
+        </li>
+        <li class="card">
+          <figure>
+            <img alt="" src="./img/LIFTING.png">
+            <figcaption>
+              <h3>lifting</h3>
+            </figcaption>
+          </figure>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, lacus eget consequat</p><a class="btn btn-small" href="">see more</a>
+        </li>
+        <li class="card">
+          <figure>
+            <img alt="" src="./img/YOGA.png">
+            <figcaption>
+              <h3>yoga</h3>
+            </figcaption>
+          </figure>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, lacus eget consequat</p><a class="btn btn-small" href="">see more</a>
+        </li>
+      </ul>
+    </article><!--=============== TEAM ===============-->
+    <article class="team" aria-labelledby="team-title">
+      <header class="headline flex-row">
+        <h2 id="team-title">Our team</h2>
+      </header>
+      <ul class="auto-grid" role="list">
+        <li class="card">
+          <figure>
+            <img alt="" src="./img/Frame1.png">
+            <figcaption>
+              <h3>jamies ford</h3>
+            </figcaption>
+          </figure>
+          <div class="card__body grid">
+            <em>Trainer</em>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, lacus eget consequat</p><a class="btn btn-small" href="">see more</a>
+          </div>
+        </li>
+        <li class="card">
+          <figure>
+            <img alt="" src="./img/Frame2.png">
+            <figcaption>
+              <h3>eddie smith</h3>
+            </figcaption>
+          </figure>
+          <div class="card__body grid">
+            <em>Trainer</em>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, lacus eget consequat</p><a class="btn btn-small" href="">see more</a>
+          </div>
+        </li>
+        <li class="card">
+          <figure>
+            <img alt="" src="./img/Frame3.png">
+            <figcaption>
+              <h3>annie summer</h3>
+            </figcaption>
+          </figure>
+          <div class="card__body grid">
+            <em>Trainer</em>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, lacus eget consequat</p><a class="btn btn-small" href="">see more</a>
+          </div>
+        </li>
+        <li class="card">
+          <figure>
+            <img alt="" src="./img/Frame4.png">
+            <figcaption>
+              <h3>emily sea</h3>
+            </figcaption>
+          </figure>
+          <div class="card__body grid">
+            <em>Trainer</em>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, lacus eget consequat</p><a class="btn btn-small" href="">see more</a>
+          </div>
+        </li>
+      </ul>
+      <div class="team__button text-center">
+        <a class="btn btn-small" href="">see more</a>
+      </div>
+    </article><!--=============== PlAN ===============-->
+    <section class="region" aria-labelledby="region-title">
+      <div class="text-center">
+        <h2 id="region-title">discover your potential</h2>
+        <p class="mx-auto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum. text of the printing and typesetting</p>
+      </div>
+      <div class="region__cta flex-row">
+        <a class="btn btn-md-pi" href="">view plan</a><a class="btn btn-md-bc" href="">learn more</a>
+      </div>
+    </section>
+  </main><!--=============== FOOTER ===============-->
+  <footer class="primary-footer" role="contentinfo">
+    <div class="primary-footer__content flex-row">
+      <div class="primary-footer__social flow grid">
+        <a class="logo" href="#"><img alt="" src="./img/Logo.png"></a>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.</p>
+        <ul class="primary-footer__social-icons flex-row" role="list">
+          <li>
+            <a class="grid" href="#"><span aria-hidden="true" class="bi bi-facebook"></span></a>
+          </li>
+          <li>
+            <a class="grid" href="#"><span aria-hidden="true" class="bi bi-instagram"></span></a>
+          </li>
+          <li>
+            <a class="grid" href="#"><span aria-hidden="true" class="bi bi-twitter"></span></a>
+          </li>
+          <li>
+            <a class="grid" href="#"><span aria-hidden="true" class="bi bi-whatsapp"></span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="primary-footer__nav flex-row">
+        <div class="primary-footer__nav-list">
+          <h3>info</h3>
+          <ul aria-label="secondary" role="list">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Press</a>
+            </li>
+            <li>
+              <a href="#">Product Updates</a>
+            </li>
+          </ul>
+        </div>
+        <div class="primary-footer__nav-list">
+          <h3>get in touch</h3>
+          <ul aria-label="secondary" role="list">
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="primary-footer__email">
+        <h3>subscribe to our newsletter</h3>
+        <div class="primary-footer__email-box">
+          <form action="#">
+            <input placeholder="Type your email here" type="email"> <button class="btn btn-small" type="submit">subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="copyright flex-row">
+      <p>Copyright &copy; 2021 Enisson Lemos | All right reserved</p>
+      <p>Terms &amp; Conditions</p>
+    </div>
+  </footer>
+  <script defer src="./js/main.js">
+  </script>
+</body>
+</html>
