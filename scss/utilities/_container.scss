@@ -1,4 +1,6 @@
+@use "../abstracts/function" as *;
+
 .container {
-  width: min(100% - 1.5rem, 73rem);
+  width: min(100% - 1.5rem, rem(1168));
   margin-inline: auto;
 }

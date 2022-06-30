@@ -70,18 +70,11 @@ body {
   background-color: var(--clr-dark-700);
 }
 
-[tabindex="-1"] {
-  outline: none;
-}
-
 :focus {
   outline: 1px solid var(--clr-pink-300);
   outline-offset: 0.25rem;
 }
 
-main:focus {
-  outline: none;
-}
 main > * {
   margin-top: 9.375rem;
 }
@@ -89,6 +82,10 @@ main > * {
   main > * {
     margin-top: 3.125rem;
   }
+}
+
+[tabindex="-1"] {
+  outline: 0;
 }
 
 [role=list] {
@@ -149,6 +146,11 @@ h3,
   text-transform: uppercase;
 }
 
+p {
+  --width: 44ch;
+  max-width: var(--width);
+}
+
 em {
   font-weight: 600;
 }
@@ -169,7 +171,7 @@ a {
   .auto-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
-    gap: var(--auto-grid-row-gap) var(--auto-grid-column-gap);
+    gap: var(--auto-grid-gap);
     justify-items: center;
   }
 
@@ -289,16 +291,14 @@ a {
     width: 8.9375rem;
     border-radius: var(--border-radius-3) 0 0 var(--border-radius-3);
     padding: 3rem 0 1.1875rem;
-    background: var(--clr-pink-600);
+    background-color: var(--clr-pink-600);
     -webkit-box-shadow: var(--shadow-4);
             box-shadow: var(--shadow-4);
     -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
             transform: translateX(100%);
   }
   .primary-header__navigation[data-visible=true] {
     -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
             transform: translateX(0);
   }
 }
@@ -335,21 +335,18 @@ a {
   height: 0.3125rem;
   background: var(--clr-pink-600);
   -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
           transform: translateY(100%);
   -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
   transition: 0.2s;
   opacity: 0;
 }
 .primary-header__navigation nav > ul > li:hover::before {
   -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
 }
 .primary-header__cta {
-  gap: 0;
+  --gap: 0;
   text-transform: uppercase;
 }
 .primary-header__cta--login {
@@ -363,6 +360,10 @@ a {
 }
 .primary-header [role=button] {
   color: var(--clr-light-100);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 @media only screen and (min-width: 61.9375em) {
   .primary-header [role=button] {
@@ -493,6 +494,7 @@ a {
 }
 .primary-footer__email button {
   border: 0;
+  cursor: pointer;
 }
 .primary-footer .copyright {
   -webkit-box-pack: justify;
@@ -520,6 +522,7 @@ a {
 }
 
 .home .hero {
+  --gap: 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -559,7 +562,6 @@ a {
   }
 }
 .home .hero__text p {
-  max-width: 44ch;
   margin-bottom: 5.6875rem;
 }
 @media (max-width: 47.937em) {
@@ -614,11 +616,9 @@ a {
   aspect-ratio: 1/1;
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
   -webkit-transform: matrix(0.71, -0.69, 0.72, 0.71, 0, 0);
-      -ms-transform: matrix(0.71, -0.69, 0.72, 0.71, 0, 0);
           transform: matrix(0.71, -0.69, 0.72, 0.71, 0, 0);
   border-radius: 50%;
 }
@@ -639,8 +639,7 @@ a {
 }
 .home .activity .cards {
   --auto-grid-min-size: 18.75rem;
-  --auto-grid-row-gap: 1.875rem;
-  --auto-grid-column-gap: 1.875rem;
+  --auto-grid-gap: 1.875rem;
 }
 @media (max-width: 47.937em) {
   .home .activity .cards .card {
@@ -690,14 +689,12 @@ a {
 }
 .home .team .auto-grid {
   --auto-grid-min-size: 13.5rem;
-  --auto-grid-row-gap: 1.25rem;
-  --auto-grid-column-gap: 2.5rem;
+  --auto-grid-gap: 1.25rem 2.5rem;
 }
 @media (max-width: 47.937em) {
   .home .team .auto-grid {
     --auto-grid-min-size: 10rem;
-    --auto-grid-row-gap: 2.375rem;
-    --auto-grid-column-gap: 0.625rem;
+    --auto-grid-gap: 2.375rem 0.625rem;
     margin-bottom: 1.25rem;
   }
 }
@@ -796,7 +793,7 @@ a {
 }
 .home .region p {
   color: var(--clr-light-100);
-  max-width: 80ch;
+  --width: 80ch;
   margin-bottom: 6.07em;
 }
 .home .region__cta {

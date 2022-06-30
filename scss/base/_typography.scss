@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 body {
   font-size: var(--fs-400);
@@ -38,6 +38,11 @@ h3,
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   text-transform: uppercase;
+}
+
+p {
+  --width: 44ch;
+  max-width: var(--width);
 }
 
 em {

@@ -5,7 +5,7 @@
       auto-fill,
       minmax(var(--auto-grid-min-size, 16rem), 1fr)
     );
-    gap: var(--auto-grid-row-gap) var(--auto-grid-column-gap);
+    gap: var(--auto-grid-gap);
     justify-items: center;
   }
 

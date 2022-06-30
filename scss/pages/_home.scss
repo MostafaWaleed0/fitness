@@ -1,6 +1,7 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 .home {
   .hero {
+    --gap: 0;
     justify-content: space-between;
     @include breakpoint-down(small) {
       flex-direction: column;
@@ -33,7 +34,6 @@
       }
 
       p {
-        max-width: 44ch;
         margin-bottom: rem(91);
         @include breakpoint-down(small) {
           margin-bottom: rem(55);
@@ -94,13 +94,13 @@
 
     &__img {
       object-fit: cover;
-      background-image: url('../img/img-home.png');
+      background-image: url("../img/img-home.png");
       width: rem(305);
       height: rem(440);
       border-radius: var(--border-radius-3);
 
       @include breakpoint-down(small) {
-        background-image: url('../img/woman.png');
+        background-image: url("../img/woman.png");
         width: rem(336);
         height: rem(283);
       }
@@ -110,8 +110,7 @@
   .activity {
     .cards {
       --auto-grid-min-size: 18.75rem;
-      --auto-grid-row-gap: 1.875rem;
-      --auto-grid-column-gap: 1.875rem;
+      --auto-grid-gap: 1.875rem;
 
       .card {
         @include breakpoint-down(small) {
@@ -166,13 +165,11 @@
   .team {
     .auto-grid {
       --auto-grid-min-size: 13.5rem;
-      --auto-grid-row-gap: 1.25rem;
-      --auto-grid-column-gap: 2.5rem;
+      --auto-grid-gap: 1.25rem 2.5rem;
 
       @include breakpoint-down(small) {
         --auto-grid-min-size: 10rem;
-        --auto-grid-row-gap: 2.375rem;
-        --auto-grid-column-gap: 0.625rem;
+        --auto-grid-gap: 2.375rem 0.625rem;
         margin-bottom: rem(20);
       }
 
@@ -269,7 +266,7 @@
 
     p {
       color: var(--clr-light-100);
-      max-width: 80ch;
+      --width: 80ch;
       margin-bottom: 6.07em;
     }
 

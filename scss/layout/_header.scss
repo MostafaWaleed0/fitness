@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .primary-header {
   align-items: center;
@@ -13,11 +13,11 @@
       width: rem(143);
       border-radius: var(--border-radius-3) 0 0 var(--border-radius-3);
       padding: rem(48) 0 rem(19);
-      background: var(--clr-pink-600);
+      background-color: var(--clr-pink-600);
       box-shadow: var(--shadow-4);
       transform: translateX(100%);
 
-      &[data-visible='true'] {
+      &[data-visible="true"] {
         transform: translateX(0);
       }
     }
@@ -53,7 +53,7 @@
   }
 
   &__cta {
-    gap: 0;
+    --gap: 0;
     text-transform: uppercase;
 
     &--login {
@@ -68,8 +68,9 @@
     }
   }
 
-  [role='button'] {
+  [role="button"] {
     color: var(--clr-light-100);
+    user-select: none;
     @include breakpoint(large) {
       display: none;
     }
